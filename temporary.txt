@@ -1,0 +1,2 @@
+SELECT * FROM `rule_sub` where `rule_sub`.id = 1 AND `rule_sub`.`rule_id` IN (SELECT `rule_obj`.`rule_id` FROM `rule_obj` WHERE `rule_obj`.`objectid` = 1 AND `rule_obj`.`operation` = 'read')
+SELECT * FROM `sub1` WHERE empid = 1 
