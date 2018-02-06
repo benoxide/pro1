@@ -5,13 +5,14 @@
  * Date: 11/11/2017
  * Time: 6:16 PM
  */
-$servername = "localhost";
+$dbhost = getenv("MYSQL_SERVICE_HOST");
+//$servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "temporary";
 
 // Creating connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($dbhost, $username, $password, $dbname);
 
 // Checking connection
 if (!$conn) {
