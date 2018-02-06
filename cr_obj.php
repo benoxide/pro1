@@ -9,7 +9,7 @@
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 //$servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $dbname = "temporary";
 
 // Creating connection
