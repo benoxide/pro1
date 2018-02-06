@@ -7,13 +7,14 @@
  */
 function load_objectid()
 {
-    $servername = "localhost";
+    $dbhost = getenv("MYSQL_SERVICE_HOST");
+    //$servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "root";
     $dbname = "temporary";
 
 // Creating connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    $conn = mysqli_connect($dbhost, $username, $password, $dbname);
 
 // Checking connection
     if (!$conn) {
@@ -30,13 +31,14 @@ function load_objectid()
 }
 function load_columns()
 {
-    $servername = "localhost";
+    $dbhost = getenv("MYSQL_SERVICE_HOST");
+    //$servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "root";
     $dbname = "temporary";
 
 // Creating connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    $conn = mysqli_connect($dbhost, $username, $password, $dbname);
 
 // Checking connection
     if (!$conn) {
