@@ -7,9 +7,10 @@
  */
 function load_objectid()
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+	$servername = getenv("MYSQL_SERVICE_HOST");
+    //$servername = "localhost";
+    $username = "user";
+    $password = "password";
     $dbname = "temporary";
 
 // Creating connection
@@ -30,9 +31,10 @@ function load_objectid()
 }
 function load_columns()
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+	$servername = getenv("MYSQL_SERVICE_HOST");
+    //$servername = "localhost";
+    $username = "user";
+    $password = "password";
     $dbname = "temporary";
 
 // Creating connection
