@@ -7,7 +7,8 @@
  */
 function load_columns()
 {
-    $servername = "localhost";
+    $servername = getenv("MYSQL_SERVICE_HOST");
+    //$servername = "localhost";
     $username = "user";
     $password = "password";
     $dbname = "temporary";
