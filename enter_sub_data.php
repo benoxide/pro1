@@ -5,9 +5,10 @@
  * Date: 11/3/2017
  * Time: 7:00 PM
  */
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = getenv("MYSQL_SERVICE_HOST");
+//$servername = "localhost";
+$username = "user";
+$password = "password";
 $dbname = "temporary";
 
 // Creating connection
