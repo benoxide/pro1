@@ -6,10 +6,11 @@
  * Time: 9:56 AM
  */
 
- 
-$servername = "localhost";
-$username = "root";
-$password = "";
+
+$servername = getenv("MYSQL_SERVICE_HOST");
+//$servername = "localhost";
+$username = "user";
+$password = "password";
 $dbname = "temporary";
 // Creating connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
