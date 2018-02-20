@@ -8,8 +8,8 @@
 function load_columns()
 {
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "user";
+    $password = "password";
     $dbname = "temporary";
 
 // Creating connection
