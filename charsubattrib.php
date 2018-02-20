@@ -8,8 +8,8 @@
 
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 //$servername = "localhost";
-$username = "root";
-$password = "root";
+$username = "user";
+$password = "password";
 $dbname = "temporary";
 
 // Creating connection
