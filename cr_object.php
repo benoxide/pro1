@@ -21,7 +21,7 @@ function load_table()
         die("Connection failed: " . mysqli_connect_error());
     }
     $output = '';
-    $sql = "SHOW TABLES FROM TEMPORARY";
+    $sql = "SHOW TABLES FROM temporary";
     $result = mysqli_query($conn,$sql);
     while ($row = mysqli_fetch_array($result))
     {
