@@ -7,14 +7,13 @@
  */
 function load_objectid()
 {
-    $dbhost = getenv("MYSQL_SERVICE_HOST");
-    //$servername = "localhost";
+    $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "temporary";
 
 // Creating connection
-    $conn = mysqli_connect($dbhost, $username, $password, $dbname);
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Checking connection
     if (!$conn) {
@@ -31,14 +30,13 @@ function load_objectid()
 }
 function load_columns()
 {
-    $dbhost = getenv("MYSQL_SERVICE_HOST");
-    //$servername = "localhost";
+    $servername = "localhost";
     $username = "root";
-    $password = "root";
+    $password = "";
     $dbname = "temporary";
 
 // Creating connection
-    $conn = mysqli_connect($dbhost, $username, $password, $dbname);
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Checking connection
     if (!$conn) {
@@ -68,6 +66,7 @@ function load_columns()
                             <option value="">Select an object_id</option>
                             <?php echo load_objectid();?>
                         </select></td></tr>
+				<tr> <td>Link</td><td> <input type="text" name="links" required></td></tr>
                 <tr><td>Enter Subject Attributes</td></tr>
                 <tr><td><select name="cname1" onchange="getVal(this.value);">
                     <option value="">Select a column name</option>
@@ -84,7 +83,7 @@ function load_columns()
                             <option value="">Select a value </option>
                         </select></td></tr>
 
-
+				
 
 
 

@@ -5,14 +5,13 @@
  * Date: 11/11/2017
  * Time: 6:16 PM
  */
-$dbhost = getenv("MYSQL_SERVICE_HOST");
-//$servername = "localhost";
+$servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "temporary";
 
 // Creating connection
-$conn = mysqli_connect($dbhost, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // Checking connection
 if (!$conn) {
@@ -21,7 +20,8 @@ if (!$conn) {
 $col_name1 = $_POST['ruleid'];
 $col_name2 = $_POST['ops'];
 $col_name3 = $_POST['objid'];
-$sql = "INSERT INTO `rule_obj`(`rule_id`, `operation`, `objectid`) VALUES ('$col_name1','$col_name2',$col_name3)";
+$col_name10 = $_POST['links'];
+$sql = "INSERT INTO `rule_obj`(`rule_id`, `operation`, `objectid`,`link`) VALUES ('$col_name1','$col_name2',$col_name3,'$col_name10')";
 $col_name4 = $_POST['cname1'];
 $col_name5 = $_POST['cname2'];
 $col_name6 = $_POST['cname3'];
